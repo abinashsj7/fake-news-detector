@@ -18,7 +18,7 @@ This project detects whether a news article is Fake or Real using Natural Langua
 
 
 
-\## Tech Stack
+\Tech Stack
 
 \- Python
 
@@ -34,17 +34,17 @@ This project detects whether a news article is Fake or Real using Natural Langua
 
 
 
-\## Dataset
+\Dataset
 
 Fake and Real News Dataset (Kaggle)
 
 
 
-\## Model Performance
+\ Model Performance
 
 
 
-\### Logistic Regression
+\Logistic Regression
 
 \- Accuracy: 98.84%
 
@@ -56,7 +56,7 @@ Fake and Real News Dataset (Kaggle)
 
 
 
-\### Naive Bayes
+\ Naive Bayes
 
 \- Accuracy: 93.80%
 
@@ -72,7 +72,7 @@ Logistic Regression outperformed Naive Bayes and was selected as the final deplo
 
 
 
-\## How to Run
+\ How to Run
 
 
 
