@@ -36,7 +36,11 @@ def clean_text(text):
     words = [lemmatizer.lemmatize(word) for word in words if word not in stop_words]
     return " ".join(words)
 
-data["clean_text"] = data["text"].apply(clean_text)
+# Combine title + text
+data["content"] = data["title"] + " " + data["text"]
+
+# Clean combined content
+data["clean_text"] = data["content"].apply(clean_text)
 
 # Feature extraction
 vectorizer = TfidfVectorizer(max_features=5000)
@@ -53,9 +57,22 @@ model.fit(X_train, y_train)
 # Evaluate
 pred = model.predict(X_test)
 
-print("Accuracy:", accuracy_score(y_test, pred))
-print("\nClassification Report:\n", classification_report(y_test, pred))
-print("\nConfusion Matrix:\n", confusion_matrix(y_test, pred))
+print("Logistic Regression Accuracy:", accuracy_score(y_test, pred))
+print("\nLogistic Regression Report:\n", classification_report(y_test, pred))
+print("\nLogistic Regression Confusion Matrix:\n", confusion_matrix(y_test, pred))
+
+# 🔥 ADD THIS PART BELOW
+
+from sklearn.naive_bayes import MultinomialNB
+
+nb_model = MultinomialNB()
+nb_model.fit(X_train, y_train)
+
+nb_pred = nb_model.predict(X_test)
+
+print("\nNaive Bayes Accuracy:", accuracy_score(y_test, nb_pred))
+print("\nNaive Bayes Report:\n", classification_report(y_test, nb_pred))
+print("\nNaive Bayes Confusion Matrix:\n", confusion_matrix(y_test, nb_pred))
 
 # Create model folder if not exists
 os.makedirs("model", exist_ok=True)
