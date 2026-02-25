@@ -13,8 +13,7 @@ Coming soon – Deployment on Streamlit Cloud.
 
 ## Overview
 This project detects whether a news article is Fake or Real using Natural Language Processing (NLP) and Machine Learning techniques.
-\## Overview
-
+\
 This project detects whether a news article is Fake or Real using Natural Language Processing (NLP) and Machine Learning techniques.
 
 
