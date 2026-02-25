@@ -1,7 +1,18 @@
-\# Fake News Detection System
+# Fake News Detection System
 
+## 🚀 Live Demo
+Coming soon – Deployment on Streamlit Cloud.
 
+## Key Features
 
+- Dual input: Headline + Article content
+- TF-IDF feature extraction (5000 features)
+- Logistic Regression & Naive Bayes comparison
+- 98.84% test accuracy
+- Interactive Streamlit interface
+
+## Overview
+This project detects whether a news article is Fake or Real using Natural Language Processing (NLP) and Machine Learning techniques.
 \## Overview
 
 This project detects whether a news article is Fake or Real using Natural Language Processing (NLP) and Machine Learning techniques.
